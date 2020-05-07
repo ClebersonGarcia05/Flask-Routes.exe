@@ -21,7 +21,7 @@ def produtos(id):
     prod = produto[id]
     return render_template(
         'produtos.html',
-        produ = prod
+        produto = prod
     )
 if __name__ == '__main__':
     app.run()

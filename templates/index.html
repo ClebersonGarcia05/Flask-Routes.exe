@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -39,21 +39,24 @@
             <td>Preço</td>
         </tr>
         {% for nome, val in produto %}
-            <a href="/prod/{{loop.index0}}">
+           
             <tr>   
-
+                <td>
+                    <a href="/prod/{{loop.index0}}">
+                        {{ nome }}
+                    </a>
+                </td>
+                
                 {% if val < 5 %}
-                    <td>{{ nome }}</td>
-                    <td>{{ val }}</td>
+                    <td>R${{ val }}</td>
                 
                 {% else %}
-                    <td>{{ nome }}</td>
-                    <td class="red">{{ val }}</td>
+                    <td class="red">R${{ val }}</td>
                 
                 {% endif %}
-                
+                </a>
             </tr>
-            </a>
+            
         {%endfor%}
     </table>
 </body>
